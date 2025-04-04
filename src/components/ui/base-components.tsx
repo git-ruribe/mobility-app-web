@@ -14,6 +14,7 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;
   icon?: React.ElementType;
+  className?: string; // Add this line
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -25,6 +26,7 @@ export const Button: React.FC<ButtonProps> = ({
   type = 'button',
   onClick,
   icon: Icon,
+  className = '',
 }) => {
   const baseClasses = 'rounded-xl font-medium flex items-center justify-center transition-colors';
   
